@@ -41,6 +41,7 @@ namespace HomewoodChallenge.ViewModels
 
         public int Columns { get; } = 3;
         public int ImageSpacing { get; } = 5;
+        public int DoubleImageSpacing { get; } = 10;
 
         private int GetImageSize()
             => (int)(DeviceDisplay.MainDisplayInfo.Width / DeviceDisplay.MainDisplayInfo.Density
