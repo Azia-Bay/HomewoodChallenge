@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage x:Name="ThisPage"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HomewoodChallenge.Views.GalleryPage">
+    <StackLayout BackgroundColor="White">
+        <!-- Title -->
+        <Frame
+            Padding="0, 50, 0, 0"
+            HasShadow="False">
+            <Label
+                Text="Gallery"
+                TextColor="Black"
+                HorizontalTextAlignment="Center"
+                FontFamily="Lato"
+                FontAttributes="Bold"
+                FontSize="Title" />
+        </Frame>
+        
+        <!-- Image Collection -->
+        <CollectionView
+            ItemsSource="{Binding ImageCollection}"
+            Margin="{Binding ImageSpacing}">
+            <CollectionView.ItemsLayout>
+                <GridItemsLayout
+                    HorizontalItemSpacing="{Binding ImageSpacing}"
+                    VerticalItemSpacing="{Binding ImageSpacing}"
+                    Span="{Binding Columns}"
+                    Orientation="Vertical" />
+            </CollectionView.ItemsLayout>
+            
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Image
+                        Source="{Binding Source}"
+                        Aspect="AspectFill"
+                        WidthRequest="{Binding Path=ImageSize, Source={x:Reference ThisPage}}"
+                        HeightRequest="{Binding Path=ImageSize, Source={x:Reference ThisPage}}" />
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </StackLayout>
+</ContentPage>

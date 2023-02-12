@@ -1,0 +1,69 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>portable</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\Fonts\Lato-Bold.ttf" />
+    <None Remove="Resources\Fonts\times.ttf" />
+    <None Remove="Resources\Images\albert-cashier.jpg" />
+    <None Remove="Resources\Images\black-gay-man.jpg" />
+    <None Remove="Resources\Images\boy-attacked-by-police-dog.jpg" />
+    <None Remove="Resources\Images\desegregation-protest.jpg" />
+    <None Remove="Resources\Images\emmett-till-casket.png" />
+    <None Remove="Resources\Images\harvey-milk-against-briggs-initiative.jpg" />
+    <None Remove="Resources\Images\i-am-a-man.jpg" />
+    <None Remove="Resources\Images\kids.jpg" />
+    <None Remove="Resources\Images\leslie-feinberg-rally.jpg" />
+    <None Remove="Resources\Images\leslie-feinberg-transexual-menace.jpg" />
+    <None Remove="Resources\Images\little-rock-nine.jpg" />
+    <None Remove="Resources\Images\margaret-hamilton.jpeg" />
+    <None Remove="Resources\Images\mlk-i-have-a-dream.jpeg" />
+    <None Remove="Resources\Images\napalm-girl.jpg" />
+    <None Remove="Resources\Images\olympics-black-power-salute.jpeg" />
+    <None Remove="Resources\Images\voting-rights-protest.jpg" />
+    <None Remove="Resources\Images\white-only-water-fountain.jpg" />
+    <None Remove="Resources\Images\woolsworth-sit-in.png" />
+    <None Remove="Resources\Images\workers-atop-a-skyscraper.jpeg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Fonts\Lato-Bold.ttf" />
+    <EmbeddedResource Include="Resources\Images\albert-cashier.jpg" />
+    <EmbeddedResource Include="Resources\Images\black-gay-man.jpg" />
+    <EmbeddedResource Include="Resources\Images\boy-attacked-by-police-dog.jpg" />
+    <EmbeddedResource Include="Resources\Images\desegregation-protest.jpg" />
+    <EmbeddedResource Include="Resources\Images\emmett-till-casket.png" />
+    <EmbeddedResource Include="Resources\Images\harvey-milk-against-briggs-initiative.jpg" />
+    <EmbeddedResource Include="Resources\Images\i-am-a-man.jpg" />
+    <EmbeddedResource Include="Resources\Images\leslie-feinberg-rally.jpg" />
+    <EmbeddedResource Include="Resources\Images\leslie-feinberg-transexual-menace.jpg" />
+    <EmbeddedResource Include="Resources\Images\little-rock-nine.jpg" />
+    <EmbeddedResource Include="Resources\Images\margaret-hamilton.jpeg" />
+    <EmbeddedResource Include="Resources\Images\mlk-i-have-a-dream.jpeg" />
+    <EmbeddedResource Include="Resources\Images\napalm-girl.jpg" />
+    <EmbeddedResource Include="Resources\Images\olympics-black-power-salute.jpeg" />
+    <EmbeddedResource Include="Resources\Images\voting-rights-protest.jpg" />
+    <EmbeddedResource Include="Resources\Images\white-only-water-fountain.jpg" />
+    <EmbeddedResource Include="Resources\Images\woolsworth-sit-in.png" />
+    <EmbeddedResource Include="Resources\Images\workers-atop-a-skyscraper.jpeg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2196" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.7.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Views\GalleryPage.xaml.cs">
+      <DependentUpon>GalleryPage.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+</Project>

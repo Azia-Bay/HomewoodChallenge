@@ -1,0 +1,15 @@
+C:\Users\aziab\OneDrive\Documents\GitHub\HomewoodChallenge\HomewoodChallenge\bin\Debug\netstandard2.0\HomewoodChallenge.deps.json
+C:\Users\aziab\OneDrive\Documents\GitHub\HomewoodChallenge\HomewoodChallenge\bin\Debug\netstandard2.0\HomewoodChallenge.dll
+C:\Users\aziab\OneDrive\Documents\GitHub\HomewoodChallenge\HomewoodChallenge\bin\Debug\netstandard2.0\HomewoodChallenge.pdb
+C:\Users\aziab\OneDrive\Documents\GitHub\HomewoodChallenge\HomewoodChallenge\obj\Debug\netstandard2.0\HomewoodChallenge.csproj.AssemblyReference.cache
+C:\Users\aziab\OneDrive\Documents\GitHub\HomewoodChallenge\HomewoodChallenge\obj\Debug\netstandard2.0\HomewoodChallenge.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\aziab\OneDrive\Documents\GitHub\HomewoodChallenge\HomewoodChallenge\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\aziab\OneDrive\Documents\GitHub\HomewoodChallenge\HomewoodChallenge\obj\Debug\netstandard2.0\HomewoodChallenge.AssemblyInfoInputs.cache
+C:\Users\aziab\OneDrive\Documents\GitHub\HomewoodChallenge\HomewoodChallenge\obj\Debug\netstandard2.0\HomewoodChallenge.AssemblyInfo.cs
+C:\Users\aziab\OneDrive\Documents\GitHub\HomewoodChallenge\HomewoodChallenge\obj\Debug\netstandard2.0\HomewoodChallenge.csproj.CoreCompileInputs.cache
+C:\Users\aziab\OneDrive\Documents\GitHub\HomewoodChallenge\HomewoodChallenge\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\aziab\OneDrive\Documents\GitHub\HomewoodChallenge\HomewoodChallenge\obj\Debug\netstandard2.0\HomewoodChallenge.dll
+C:\Users\aziab\OneDrive\Documents\GitHub\HomewoodChallenge\HomewoodChallenge\obj\Debug\netstandard2.0\refint\HomewoodChallenge.dll
+C:\Users\aziab\OneDrive\Documents\GitHub\HomewoodChallenge\HomewoodChallenge\obj\Debug\netstandard2.0\HomewoodChallenge.pdb
+C:\Users\aziab\OneDrive\Documents\GitHub\HomewoodChallenge\HomewoodChallenge\obj\Debug\netstandard2.0\ref\HomewoodChallenge.dll
+C:\Users\aziab\OneDrive\Documents\GitHub\HomewoodChallenge\HomewoodChallenge\obj\Debug\netstandard2.0\Views\GalleryPage.xaml.g.cs
