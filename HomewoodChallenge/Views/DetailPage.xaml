@@ -9,6 +9,10 @@
                 Padding="0, 50, 0, 0"
                 HasShadow="False">
                 <Grid Padding="{Binding ImageSpacing}">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto" />
+                    </Grid.RowDefinitions>
+                    
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*" />      <!-- Back -->
                         <ColumnDefinition Width="auto" />   <!-- Title -->
@@ -44,6 +48,7 @@
             
             <!-- Image Collection -->
             <CarouselView
+                Margin="{Binding ImageCarouselViewMargin}"
                 ItemsSource="{Binding ImageCollection}"
                 CurrentItem="{Binding SelectedImage}">
                 <CarouselView.ItemsLayout>
@@ -56,10 +61,7 @@
                 
                 <CarouselView.ItemTemplate>
                     <DataTemplate>
-                        <Image
-                            Source="{Binding Source}"
-                            HorizontalOptions="FillAndExpand"
-                            VerticalOptions="FillAndExpand" />
+                        <Image Source="{Binding Source}" />
                     </DataTemplate>
                 </CarouselView.ItemTemplate>
             </CarouselView>
