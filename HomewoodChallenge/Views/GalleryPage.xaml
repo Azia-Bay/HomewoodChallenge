@@ -35,7 +35,11 @@
                         Source="{Binding Source}"
                         Aspect="AspectFill"
                         WidthRequest="{Binding Path=ImageSize, Source={x:Reference ThisPage}}"
-                        HeightRequest="{Binding Path=ImageSize, Source={x:Reference ThisPage}}" />
+                        HeightRequest="{Binding Path=ImageSize, Source={x:Reference ThisPage}}">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnImageTapped" />
+                        </Image.GestureRecognizers>    
+                    </Image>
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>

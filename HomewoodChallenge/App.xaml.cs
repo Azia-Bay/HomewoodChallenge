@@ -10,7 +10,7 @@ namespace HomewoodChallenge
         {
             InitializeComponent();
 
-            MainPage = new GalleryPage();
+            MainPage = new NavigationPage(new GalleryPage());
         }
 
         protected override void OnStart()

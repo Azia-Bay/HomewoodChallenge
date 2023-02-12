@@ -1,4 +1,4 @@
-﻿using System.Reflection;
+﻿using System;
 using System.Collections.ObjectModel;
 using Xamarin.Forms;
 using Xamarin.Essentials;
@@ -41,7 +41,6 @@ namespace HomewoodChallenge.Views
         };
         public int Columns { get; } = 3;
         public int ImageSpacing { get; } = 5;
-        // , typeof(GalleryPage).GetTypeInfo().Assembly)
 
         private int GetImageSize()
             => (int)(DeviceDisplay.MainDisplayInfo.Width / DeviceDisplay.MainDisplayInfo.Density 
@@ -51,6 +50,8 @@ namespace HomewoodChallenge.Views
 
         public GalleryPage()
         {
+            NavigationPage.SetHasNavigationBar(this, false);
+
             DeviceDisplay.MainDisplayInfoChanged += DeviceDisplay_MainDisplayInfoChanged;
 
             InitializeComponent();
@@ -59,5 +60,11 @@ namespace HomewoodChallenge.Views
 
         private void DeviceDisplay_MainDisplayInfoChanged(object sender, DisplayInfoChangedEventArgs e)
             => OnPropertyChanged("ImageSize");
+
+        private void OnImageTapped(object sender, EventArgs e)
+        {
+            Image image = (Image)sender;
+            Navigation.PushAsync(new DetailPage(image));
+        }
     }
 }
