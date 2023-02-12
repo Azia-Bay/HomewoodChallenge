@@ -4,17 +4,41 @@
              x:Class="HomewoodChallenge.Views.DetailPage">
     <ContentPage.Content>
         <StackLayout BackgroundColor="White">
-            <!-- Title -->
             <Frame
-                Padding="0, 50, 0, 0"
+                Padding="5, 50, 5, 0"
                 HasShadow="False">
-                <Label
-                    Text="Detail"
-                    TextColor="Black"
-                    HorizontalTextAlignment="Center"
-                    FontFamily="Lato"
-                    FontAttributes="Bold"
-                    FontSize="Title" />
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />      <!-- Back -->
+                        <ColumnDefinition Width="auto" />   <!-- Title -->
+                        <ColumnDefinition Width="*" />      <!-- Empty -->
+                    </Grid.ColumnDefinitions>
+                    
+                    <!-- Back -->
+                    <Label
+                        Text="&#x2794;"
+                        TextColor="Black"
+                        HorizontalTextAlignment="End"
+                        FontFamily="Lato"
+                        FontAttributes="Bold"
+                        FontSize="Title"
+                        Rotation="180"
+                        Grid.Column="0">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnBackButtonTapped" />
+                        </Label.GestureRecognizers>
+                    </Label>
+                    
+                    <!-- Title -->
+                    <Label
+                        Text="Detail"
+                        TextColor="Black"
+                        HorizontalTextAlignment="Center"
+                        FontFamily="Lato"
+                        FontAttributes="Bold"
+                        FontSize="Title"
+                        Grid.Column="1" />
+                </Grid>
             </Frame>
         
             <!-- Image -->

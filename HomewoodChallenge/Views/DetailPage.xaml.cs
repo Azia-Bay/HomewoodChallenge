@@ -1,4 +1,5 @@
-﻿using Xamarin.Forms;
+﻿using System;
+using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 namespace HomewoodChallenge.Views
@@ -16,6 +17,12 @@ namespace HomewoodChallenge.Views
 
             InitializeComponent();
             BindingContext = this;
+        }
+
+        private void OnBackButtonTapped(object sender, EventArgs e)
+        {
+            if (Navigation.NavigationStack[Navigation.NavigationStack.Count - 1] != this) return;
+            Navigation.PopAsync();
         }
     }
 }
