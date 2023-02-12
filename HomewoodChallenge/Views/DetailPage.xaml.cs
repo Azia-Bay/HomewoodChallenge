@@ -1,22 +1,19 @@
 ﻿using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using HomewoodChallenge.ViewModels;
 
 namespace HomewoodChallenge.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class DetailPage : ContentPage
     {
-        public ImageSource ImageSource { get; }
-
-        public DetailPage(Image image)
+        public DetailPage(SettingsViewModel vm)
         {
             NavigationPage.SetHasNavigationBar(this, false);
 
-            ImageSource = image.Source;
-
             InitializeComponent();
-            BindingContext = this;
+            BindingContext = vm;
         }
 
         private void OnBackButtonTapped(object sender, EventArgs e)

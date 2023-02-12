@@ -5,9 +5,9 @@
     <ContentPage.Content>
         <StackLayout BackgroundColor="White">
             <Frame
-                Padding="5, 50, 5, 0"
+                Padding="0, 50, 0, 0"
                 HasShadow="False">
-                <Grid>
+                <Grid Padding="{Binding ImageSpacing}">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*" />      <!-- Back -->
                         <ColumnDefinition Width="auto" />   <!-- Title -->
@@ -40,13 +40,28 @@
                         Grid.Column="1" />
                 </Grid>
             </Frame>
-        
-            <!-- Image -->
-            <Image
-                Source="{Binding ImageSource}"
-                Margin="5"
-                HorizontalOptions="FillAndExpand"
-                VerticalOptions="FillAndExpand" />
+            
+            <!-- Image Collection -->
+            <CarouselView
+                ItemsSource="{Binding ImageCollection}"
+                CurrentItem="{Binding SelectedImage}">
+                <CarouselView.ItemsLayout>
+                    <LinearItemsLayout
+                        Orientation="Horizontal"
+                        SnapPointsType="MandatorySingle"
+                        SnapPointsAlignment="Center"
+                        ItemSpacing="10" />
+                </CarouselView.ItemsLayout>
+                
+                <CarouselView.ItemTemplate>
+                    <DataTemplate>
+                        <Image
+                            Source="{Binding Source}"
+                            HorizontalOptions="FillAndExpand"
+                            VerticalOptions="FillAndExpand" />
+                    </DataTemplate>
+                </CarouselView.ItemTemplate>
+            </CarouselView>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

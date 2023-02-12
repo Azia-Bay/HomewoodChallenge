@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage x:Name="ThisPage"
-             xmlns="http://xamarin.com/schemas/2014/forms"
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:HomewoodChallenge.ViewModels"
              x:Class="HomewoodChallenge.Views.GalleryPage">
     <StackLayout BackgroundColor="White">
         <!-- Title -->
@@ -19,6 +19,7 @@
         
         <!-- Image Collection -->
         <CollectionView
+            x:Name="ImageCollectionView"
             ItemsSource="{Binding ImageCollection}"
             Margin="{Binding ImageSpacing}">
             <CollectionView.ItemsLayout>
@@ -34,8 +35,8 @@
                     <Image
                         Source="{Binding Source}"
                         Aspect="AspectFill"
-                        WidthRequest="{Binding Path=ImageSize, Source={x:Reference ThisPage}}"
-                        HeightRequest="{Binding Path=ImageSize, Source={x:Reference ThisPage}}">
+                        WidthRequest="{Binding Path=ImageSize, Source={vm:SettingsViewModel}}"
+                        HeightRequest="{Binding Path=ImageSize, Source={vm:SettingsViewModel}}">
                         <Image.GestureRecognizers>
                             <TapGestureRecognizer Tapped="OnImageTapped" />
                         </Image.GestureRecognizers>    
