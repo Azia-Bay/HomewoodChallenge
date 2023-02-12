@@ -63,6 +63,9 @@ namespace HomewoodChallenge.Views
 
         private void OnImageTapped(object sender, EventArgs e)
         {
+            var currentPage = Navigation.NavigationStack[Navigation.NavigationStack.Count - 1];
+            if (currentPage.GetType() == typeof(DetailPage)) return;
+
             Image image = (Image)sender;
             Navigation.PushAsync(new DetailPage(image));
         }
