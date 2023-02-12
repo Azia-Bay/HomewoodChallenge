@@ -39,6 +39,12 @@ namespace HomewoodChallenge.ViewModels
 
         public FavoritableImage SelectedImage { get; set; }
 
+        private Thickness GetTopMargin()
+            => DeviceDisplay.MainDisplayInfo.Orientation == DisplayOrientation.Portrait
+                ? new Thickness(0, 50, 0, 0) : new Thickness(0, 20, 0, 0);
+
+        public Thickness TopMargin => GetTopMargin();
+
         public int Columns { get; } = 3;
         public int ImageSpacing { get; } = 5;
         public int DoubleImageSpacing { get; } = 10;
@@ -54,6 +60,9 @@ namespace HomewoodChallenge.ViewModels
             => DeviceDisplay.MainDisplayInfoChanged += DeviceDisplay_MainDisplayInfoChanged;
 
         private void DeviceDisplay_MainDisplayInfoChanged(object sender, DisplayInfoChangedEventArgs e)
-            => OnPropertyChanged("ImageSize");
+        {
+            OnPropertyChanged("TopMargin");
+            OnPropertyChanged("ImageSize");
+        }
     }
 }

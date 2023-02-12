@@ -6,7 +6,7 @@
     <ContentPage.Content>
         <StackLayout BackgroundColor="White">
             <Frame
-                Padding="0, 50, 0, 0"
+                Padding="{Binding TopMargin}"
                 HasShadow="False">
                 <Grid Padding="{Binding ImageSpacing}">
                     <Grid.RowDefinitions>

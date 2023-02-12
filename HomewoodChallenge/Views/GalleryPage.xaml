@@ -6,7 +6,7 @@
     <StackLayout BackgroundColor="White">
         <!-- Title -->
         <Frame
-            Padding="0, 50, 0, 0"
+            Padding="{Binding TopMargin}"
             HasShadow="False">
             <Label
                 Text="Gallery"
