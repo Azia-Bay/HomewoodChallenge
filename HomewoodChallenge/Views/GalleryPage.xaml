@@ -57,7 +57,7 @@
                         <!-- Favorite -->
                         <Label
                             Padding="5, 0, 0, 0"
-                            IsVisible="{Binding Favorited}"
+                            IsVisible="{Binding IsFavorited}"
                             Text="&#x2765;"
                             TextColor="Red"
                             VerticalTextAlignment="End"

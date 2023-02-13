@@ -16,7 +16,7 @@
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*" />      <!-- Back -->
                         <ColumnDefinition Width="auto" />   <!-- Title -->
-                        <ColumnDefinition Width="*" />      <!-- Empty -->
+                        <ColumnDefinition Width="*" />      <!-- Favorite -->
                     </Grid.ColumnDefinitions>
                     
                     <!-- Back -->
@@ -26,6 +26,8 @@
                         FontSize="Title"
                         Rotation="180"
                         HorizontalOptions="Start"
+                        VerticalOptions="Center"
+                        Grid.Row="0"
                         Grid.Column="0">
                         <Label.GestureRecognizers>
                             <TapGestureRecognizer Tapped="OnBackButtonTapped" />
@@ -37,10 +39,27 @@
                         Text="Detail"
                         TextColor="Black"
                         HorizontalTextAlignment="Center"
+                        VerticalTextAlignment="Center"
                         FontFamily="Lato"
                         FontAttributes="Bold"
                         FontSize="Title"
+                        Grid.Row="0"
                         Grid.Column="1" />
+                    
+                    <!-- Favorite -->
+                    <Label
+                        Text="{Binding SelectedImageFavoriteUnicode}"
+                        TextColor="Black"
+                        FontSize="Title"
+                        Rotation="{Binding SelectedImageFavoriteRotation}"
+                        HorizontalOptions="End"
+                        VerticalOptions="Center"
+                        Grid.Row="0"
+                        Grid.Column="2">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnFavoriteTapped" />
+                        </Label.GestureRecognizers>
+                    </Label>
                 </Grid>
             </Frame>
             
@@ -48,7 +67,8 @@
             <CarouselView
                 Margin="{Binding ImageCarouselViewMargin}"
                 ItemsSource="{Binding ImageCollection}"
-                CurrentItem="{Binding SelectedImage}">
+                CurrentItem="{Binding SelectedImage}"
+                CurrentItemChanged="OnSelectedImageChanged">
                 <CarouselView.ItemsLayout>
                     <LinearItemsLayout
                         Orientation="Horizontal"

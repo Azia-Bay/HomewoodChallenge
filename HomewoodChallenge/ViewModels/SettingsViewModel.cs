@@ -39,6 +39,16 @@ namespace HomewoodChallenge.ViewModels
 
         public FavoritableImage SelectedImage { get; set; }
 
+        private string GetSelectedImageFavoriteUnicode()
+            => SelectedImage.IsFavorited ? "\u2765" : "\u2661";
+
+        public string SelectedImageFavoriteUnicode => GetSelectedImageFavoriteUnicode();
+
+        private int GetSelectedImageFavoriteRotation()
+            => SelectedImage.IsFavorited ? 90 : 0;
+
+        public int SelectedImageFavoriteRotation => GetSelectedImageFavoriteRotation();
+
         private Thickness GetTopMargin()
             => DeviceDisplay.MainDisplayInfo.Orientation == DisplayOrientation.Portrait
                 ? new Thickness(0, 50, 0, 0) : new Thickness(0, 20, 0, 0);
@@ -63,6 +73,13 @@ namespace HomewoodChallenge.ViewModels
         {
             OnPropertyChanged("TopMargin");
             OnPropertyChanged("ImageSize");
+        }
+
+        public void UpdateFavorite()
+        {
+            OnPropertyChanged("SelectedImageFavoriteUnicode");
+            OnPropertyChanged("SelectedImageFavoriteRotation");
+            SelectedImage.UpdateIsFavorited();
         }
     }
 }
