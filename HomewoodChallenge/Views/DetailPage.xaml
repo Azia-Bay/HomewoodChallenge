@@ -23,8 +23,6 @@
                     <Label
                         Text="&#x2794;"
                         TextColor="Black"
-                        FontFamily="Lato"
-                        FontAttributes="Bold"
                         FontSize="Title"
                         Rotation="180"
                         HorizontalOptions="Start"

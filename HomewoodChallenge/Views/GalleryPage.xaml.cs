@@ -22,8 +22,16 @@ namespace HomewoodChallenge.Views
             var currentPage = Navigation.NavigationStack[Navigation.NavigationStack.Count - 1];
             if (currentPage.GetType() == typeof(DetailPage)) return;
 
-            var image = (Image)sender;
-            _vm.SelectedImage = image.BindingContext as FavoritableImage;
+            try
+            {
+                var image = (Image)sender;
+                _vm.SelectedImage = image.BindingContext as FavoritableImage;
+            }
+            catch
+            {
+                var label = (Label)sender;
+                _vm.SelectedImage = label.BindingContext as FavoritableImage;
+            }
 
             Navigation.PushAsync(new DetailPage(_vm));
         }

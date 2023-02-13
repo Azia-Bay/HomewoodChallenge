@@ -32,15 +32,44 @@
             
             <CollectionView.ItemTemplate>
                 <DataTemplate>
-                    <Image
-                        Source="{Binding Source}"
-                        Aspect="AspectFill"
-                        WidthRequest="{Binding Path=ImageSize, Source={vm:SettingsViewModel}}"
-                        HeightRequest="{Binding Path=ImageSize, Source={vm:SettingsViewModel}}">
-                        <Image.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="OnImageTapped" />
-                        </Image.GestureRecognizers>    
-                    </Image>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto" />
+                        </Grid.RowDefinitions>
+                        
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto" />
+                        </Grid.ColumnDefinitions>
+                        
+                        <!-- Image -->
+                        <Image
+                            Source="{Binding Source}"
+                            Aspect="AspectFill"
+                            WidthRequest="{Binding Path=ImageSize, Source={vm:SettingsViewModel}}"
+                            HeightRequest="{Binding Path=ImageSize, Source={vm:SettingsViewModel}}"
+                            Grid.Row="0"
+                            Grid.Column="0">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnImageTapped" />
+                            </Image.GestureRecognizers>    
+                        </Image>
+                        
+                        <!-- Favorite -->
+                        <Label
+                            Padding="5, 0, 0, 0"
+                            IsVisible="{Binding Favorited}"
+                            Text="&#x2765;"
+                            TextColor="Red"
+                            VerticalTextAlignment="End"
+                            FontSize="Title"
+                            Rotation="90"
+                            Grid.Row="0"
+                            Grid.Column="0">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnImageTapped" />
+                            </Label.GestureRecognizers>
+                        </Label>
+                    </Grid>
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>
