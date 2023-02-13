@@ -10,10 +10,15 @@ namespace HomewoodChallenge.Models
         protected void OnPropertyChanged(string property)
             => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(property));
 
+        public string Uri { get; }
         public ImageSource Source { get; }
         public bool IsFavorited { get; set; } = false;
 
-        public FavoritableImage(ImageSource source) => Source = source;
+        public FavoritableImage(string uri)
+        {
+            Uri = uri;
+            Source = ImageSource.FromResource(Uri);
+        }
 
         public void UpdateIsFavorited()
             => OnPropertyChanged("IsFavorited");

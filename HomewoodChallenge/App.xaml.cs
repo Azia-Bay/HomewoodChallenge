@@ -10,6 +10,8 @@ namespace HomewoodChallenge
         {
             InitializeComponent();
 
+            Helpers.Settings.InitializeSettings();
+
             MainPage = new NavigationPage(new GalleryPage());
         }
 
@@ -18,8 +20,7 @@ namespace HomewoodChallenge
         }
 
         protected override void OnSleep()
-        {
-        }
+            => Helpers.Settings.SaveSettings();
 
         protected override void OnResume()
         {
