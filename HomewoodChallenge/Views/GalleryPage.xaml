@@ -33,14 +33,6 @@
             <CollectionView.ItemTemplate>
                 <DataTemplate>
                     <Grid>
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="auto" />
-                        </Grid.RowDefinitions>
-                        
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="auto" />
-                        </Grid.ColumnDefinitions>
-                        
                         <!-- Image -->
                         <Image
                             Source="{Binding Source}"
@@ -56,13 +48,14 @@
                         
                         <!-- Favorite -->
                         <Label
-                            Padding="5, 0, 0, 0"
-                            IsVisible="{Binding IsFavorited}"
+                            Padding="0, 0, 5, 0"
                             Text="&#x2765;"
                             TextColor="Red"
-                            VerticalTextAlignment="End"
                             FontSize="Title"
                             Rotation="90"
+                            HorizontalOptions="End"
+                            VerticalOptions="Start"
+                            IsVisible="{Binding IsFavorited}"
                             Grid.Row="0"
                             Grid.Column="0">
                             <Label.GestureRecognizers>
