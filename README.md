@@ -13,7 +13,7 @@ Pages
 * Gallery page
 * Detail page
 
-<img src="https://user-images.githubusercontent.com/99378816/218422976-9331af53-555c-41d1-8261-79198bf74027.jpg" width="250" /> <img src="https://user-images.githubusercontent.com/99378816/218424133-e98c4993-aba3-48ca-b5ec-31f5cc28cf2c.jpg" width="250" />
+<img src="https://user-images.githubusercontent.com/99378816/218549874-1a25c312-b70a-43a2-b08e-1dfc1ce34a43.jpg" width="250" /> <img src="https://user-images.githubusercontent.com/99378816/218549870-b3b5dad6-cd78-4648-af07-0cbea3045c77.jpg" width="250" />
 
 Features
 ----------------
