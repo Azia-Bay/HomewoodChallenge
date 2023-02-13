@@ -24,24 +24,24 @@ namespace HomewoodChallenge.Helpers
         private static readonly ObservableCollection<FavoritableImage> _defaultImageCollection 
             = new ObservableCollection<FavoritableImage>()
         {
-            new FavoritableImage(_imageFilePath + "albert-cashier.jpg"),
-            new FavoritableImage(_imageFilePath + "black-gay-man.jpg"),
-            new FavoritableImage(_imageFilePath + "boy-attacked-by-police-dog.jpg"),
-            new FavoritableImage(_imageFilePath + "desegregation-protest.jpg"),
-            new FavoritableImage(_imageFilePath + "emmett-till-casket.png"),
-            new FavoritableImage(_imageFilePath + "harvey-milk-against-briggs-initiative.jpg"),
-            new FavoritableImage(_imageFilePath + "i-am-a-man.jpg"),
-            new FavoritableImage(_imageFilePath + "leslie-feinberg-rally.jpg"),
-            new FavoritableImage(_imageFilePath + "leslie-feinberg-transexual-menace.jpg"),
-            new FavoritableImage(_imageFilePath + "little-rock-nine.jpg"),
-            new FavoritableImage(_imageFilePath + "margaret-hamilton.jpeg"),
-            new FavoritableImage(_imageFilePath + "mlk-i-have-a-dream.jpeg"),
-            new FavoritableImage(_imageFilePath + "napalm-girl.jpg"),
-            new FavoritableImage(_imageFilePath + "olympics-black-power-salute.jpeg"),
-            new FavoritableImage(_imageFilePath + "voting-rights-protest.jpg"),
-            new FavoritableImage(_imageFilePath + "white-only-water-fountain.jpg"),
-            new FavoritableImage(_imageFilePath + "woolsworth-sit-in.png"),
-            new FavoritableImage(_imageFilePath + "workers-atop-a-skyscraper.jpeg")
+            new FavoritableImage(_imageFilePath + "bear.png"),
+            new FavoritableImage(_imageFilePath + "bears.jpg"),
+            new FavoritableImage(_imageFilePath + "capybaras.png"),
+            new FavoritableImage(_imageFilePath + "fox.jpg"),
+            new FavoritableImage(_imageFilePath + "lion.jpg"),
+            new FavoritableImage(_imageFilePath + "lion.png"),
+            new FavoritableImage(_imageFilePath + "panda.jfif"),
+            new FavoritableImage(_imageFilePath + "panda.jpg"),
+            new FavoritableImage(_imageFilePath + "panther.png"),
+            new FavoritableImage(_imageFilePath + "penguins.jpg"),
+            new FavoritableImage(_imageFilePath + "polar-bears.jfif"),
+            new FavoritableImage(_imageFilePath + "polar-bears.jpg"),
+            new FavoritableImage(_imageFilePath + "raccoon.jpg"),
+            new FavoritableImage(_imageFilePath + "red-panda.jpg"),
+            new FavoritableImage(_imageFilePath + "seal.jpg"),
+            new FavoritableImage(_imageFilePath + "tiger.png"),
+            new FavoritableImage(_imageFilePath + "tigers.jpg"),
+            new FavoritableImage(_imageFilePath + "wolves.jpg")
         };
 
         public static ObservableCollection<FavoritableImage> ImageCollection { get; set; }
