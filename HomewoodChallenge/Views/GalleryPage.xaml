@@ -21,7 +21,8 @@
         <CollectionView
             x:Name="ImageCollectionView"
             ItemsSource="{Binding ImageCollection}"
-            Margin="{Binding ImageSpacing}">
+            Margin="{Binding ImageSpacing}"
+            VerticalOptions="FillAndExpand">
             <CollectionView.ItemsLayout>
                 <GridItemsLayout
                     HorizontalItemSpacing="{Binding ImageSpacing}"
