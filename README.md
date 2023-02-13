@@ -4,6 +4,7 @@ Photo gallery programming challenge for the Homewood Children's Village software
 Tech Stack
 ----------------
 * C#
+* XAML
 * Xamarin / Xamarin.Forms
 * .NET
 
